@@ -27,44 +27,44 @@ public class HomeworkWeek1 {
     
     public static String findStringFromArray(String[] stringArray){
 
-    	for(String str: stringArray)
-      {
-    	  if(str.contains(staticValue))
-    			return str;
-      }
+        for(String str: stringArray)
+        {
+    	    if(str.contains(staticValue))
+    	        return str;
+        }
         
-      return "";
+        return "";
     }
     
     public static void main(String[] args) {
+	
+        int arrayLength = 5;
 		
-		  int arrayLength = 5;
-		
-		  try
-		  {
-			  Scanner scanner = new Scanner(System.in);
+	try
+	{
+ 	    Scanner scanner = new Scanner(System.in);
 			
-			  String[] stringArray = new String[arrayLength]; 
+	    String[] stringArray = new String[arrayLength]; 
 			
-			  for(int i=0; i<arrayLength; i++) 
-			  {
-			    System.out.print((i+1)+ ". degeri giriniz: ");
-			    stringArray[i] = scanner.nextLine();
-			  }
+	    for(int i=0; i<arrayLength; i++) 
+	    {
+	        System.out.print((i+1)+ ". degeri giriniz: ");
+	        stringArray[i] = scanner.nextLine();
+	    }
 			
-			  String result = findStringFromArray(stringArray);
+	    String result = findStringFromArray(stringArray);
 			
-			  if(result.isEmpty())
-				  System.out.println("Tanımlı value'yu içeren String deger bulunamadı."); 
-			  else
-				  System.out.println("Tanımlı value'yu içeren String deger: " + result);
+	    if(result.isEmpty())
+	        System.out.println("Tanımlı value'yu içeren String deger bulunamadı."); 
+	    else
+		System.out.println("Tanımlı value'yu içeren String deger: " + result);
 			
-			  scanner.close();
-		  }
-		  catch(Exception e)
-		  {
-			  System.out.println(e);
-		  }
+	    scanner.close();
+	}
+	catch(Exception e)
+        {
+	    System.out.println(e);
+        }
 		
     }
 
