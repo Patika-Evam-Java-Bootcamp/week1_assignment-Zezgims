@@ -23,13 +23,13 @@ public class HomeworkWeek1 {
      * ve her değişken, "Welcome" değeri için bellekten ayrılan 3 farklı yeri referans edecekti.
     */
     
-    static String staticValue = "code";
-    
-    public static String findStringFromArray(String[] stringArray){
-
+    static String staticValue = "code";		//Static ve String data tipinde değişken oluşturur.
+	
+    public static String findStringFromArray(String[] stringArray){	//Dönüş tipi String olan ve String[] parametre alan bir metod.	
+	    
         for(String str: stringArray)
         {
-    	    if(str.contains(staticValue))
+    	    if(str.contains(staticValue))	//Her bir eleman içinde static olarak belirlenen value içeriyor mu koşulunu kontrol eder.				
     	        return str;
         }
         
@@ -46,13 +46,13 @@ public class HomeworkWeek1 {
 			
 	    String[] stringArray = new String[arrayLength]; 
 			
-	    for(int i=0; i<arrayLength; i++) 
+	    for(int i=0; i<arrayLength; i++)		//Metoda gönderilecek parametreleri kullanıcıdan alır.
 	    {
 	        System.out.print((i+1)+ ". degeri giriniz: ");
 	        stringArray[i] = scanner.nextLine();
 	    }
 			
-	    String result = findStringFromArray(stringArray);
+	    String result = findStringFromArray(stringArray);		//Kullanıcıdan alınan değerleri koşulun gerçekleştirileceği metota gönderir.
 			
 	    if(result.isEmpty())
 	        System.out.println("Tanımlı value'yu içeren String deger bulunamadı."); 
